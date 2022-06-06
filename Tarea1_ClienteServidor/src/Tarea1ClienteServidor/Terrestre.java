@@ -1,13 +1,14 @@
 package Tarea1ClienteServidor;
 
-public class Terrestre {
+public class Terrestre extends Vehiculo {
 
     //Atributos
     private int cantLlantas;
     private String tipo, combustible;
 
     //Constructor
-    public Terrestre(String tipo, int cantLlantas, String combustible) {
+    public Terrestre(String marca, int anioFabricacion, String color, String tipo, int cantLlantas, String combustible) {
+        super(marca, anioFabricacion, color);
         this.tipo = tipo;
         this.cantLlantas = cantLlantas;
         this.combustible = combustible;
@@ -32,6 +33,15 @@ public class Terrestre {
 
     public void verInfo() {
         System.out.println("Soy Terrestre");
-        System.out.println("Tipo: " + tipo + "\nCantidad de llantas:  " + cantLlantas + "\nCambustible :" + combustible);
+        System.out.println("Tipo: " + this.tipo + "\nCantidad de llantas:  " + this.cantLlantas + "\nCambustible: "
+                + this.combustible + "\n" + "-".repeat(30));
+    }
+
+    public void verInfoComplete() {
+        System.out.println("Soy un Vehiculo");
+        System.out.println("Marca: " + getMarca() + "\nAño de Fabricacion:  " + getAnioFabricacion() + "\nColor :" + getColor());
+        System.out.println("Soy Terrestre");
+        System.out.println("Tipo: " + this.tipo + "\nCantidad de llantas:  " + this.cantLlantas + "\nCambustible: "
+                + this.combustible + "\n" + "-".repeat(30));
     }
 }

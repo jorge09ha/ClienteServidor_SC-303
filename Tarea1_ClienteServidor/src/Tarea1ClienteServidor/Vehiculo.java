@@ -32,6 +32,7 @@ public class Vehiculo {
 
     public void verInfo() {
         System.out.println("Soy un Vehiculo");
-        System.out.println("Marca: " + marca + "\nAño de Fabricacion:  " + anioFabricacion + "\nColor :" + color);
+        System.out.println("Marca: " + this.marca + "\nAño de Fabricacion:  " + this.anioFabricacion + "\nColor :"
+                + this.color + "\n" + "-".repeat(30));
     }
 }
