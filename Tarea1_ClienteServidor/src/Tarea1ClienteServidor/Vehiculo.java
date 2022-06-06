@@ -34,5 +34,4 @@ public class Vehiculo {
         System.out.println("Soy un Vehiculo");
         System.out.println("Marca: " + marca + "\nAño de Fabricacion:  " + anioFabricacion + "\nColor :" + color);
     }
-
 }
