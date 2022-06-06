@@ -1,48 +1,33 @@
 package Tarea1ClienteServidor;
 
-public class Motocicleta {
-    
-   //Atributos
-    private String modelo, motor, placa;
-    private int cantPasajeros;
-    
+public class Motocicleta extends Terrestre {
+
+    //Atributos
+    private String tipoMoto;
+
     //Constructor
-    public Motocicleta(String modelo, String placa, String motor, int cantPasajeros) {
-        this.modelo = modelo;
-        this.placa = placa;
-        this.motor = motor;
-        this.cantPasajeros = cantPasajeros;
+    public Motocicleta(String marca, String modelo, String color, int cantLlantas, String motor, String tipoMoto) {
+        super(marca, modelo, color, cantLlantas, motor);
+        this.tipoMoto = tipoMoto;
     }
 
     //Metodos
-    public String getModelo() {
-        return modelo;
+    public String getTipoMoto() {
+        return tipoMoto;
     }
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public String getMotor() {
-        return motor;
-    }
-
-    public void setMotor(String motor) {
-        this.motor = motor;
-    }
-
-    public int getCantPasajeros() {
-        return cantPasajeros;
-    }
-
-    public void setCantPasajeros(int cantPasajeros) {
-        this.cantPasajeros = cantPasajeros;
-    }
-
+    @Override
     public void verInfo() {
         System.out.println("Soy una Motocicleta");
-        System.out.println("Modelo: " + modelo + "\nPlaca:  " + placa + "\nMotor :" + motor
-                + "\nCantidad de pasajeros :" + cantPasajeros);
+        System.out.println("Tipo de moto: " + this.tipoMoto + "\n" + "-".repeat(30));
     }
 
+    @Override
+    public void verInfoComplete() {
+
+        System.out.println("Soy una Motocicleta");
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
+        System.out.println("Cantidad de llantas:  " + getCantLlantas() + "\nMotor: " + getMotor());
+        System.out.println("Tipo de moto: " + this.tipoMoto + "\n" + "-".repeat(30));
+    }
 }

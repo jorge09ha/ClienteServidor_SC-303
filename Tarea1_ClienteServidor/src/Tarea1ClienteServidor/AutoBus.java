@@ -1,56 +1,48 @@
 package Tarea1ClienteServidor;
 
-public class AutoBus {
+public class AutoBus extends Terrestre {
 
     //Atributos
-    private String modelo, motor, placa;
-    private int cantPasajeros, cantPuertas;
+    private String tipoTrasporte;
+    private int cantPasajeros;
 
     //Constructor
-    public AutoBus(String modelo, String placa, String motor, int cantPasajeros, int cantPuertas) {
-        this.modelo = modelo;
-        this.placa = placa;
-        this.motor = motor;
+    public AutoBus(String marca, String modelo, String color, int cantLlantas, String motor, String tipoTrasporte, int cantPasajeros) {
+        super(marca, modelo, color, cantLlantas, motor);
+        this.tipoTrasporte = tipoTrasporte;
         this.cantPasajeros = cantPasajeros;
     }
 
-    //Metodos
-    public String getModelo() {
-        return modelo;
+    public String getTipoTrasporte() {
+        return tipoTrasporte;
     }
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public String getMotor() {
-        return motor;
-    }
-
-    public void setMotor(String motor) {
-        this.motor = motor;
+    public void setTipoTrasporte(String tipoTrasporte) {
+        this.tipoTrasporte = tipoTrasporte;
     }
 
     public int getCantPasajeros() {
         return cantPasajeros;
     }
 
+    //Metodos
     public void setCantPasajeros(int cantPasajeros) {
         this.cantPasajeros = cantPasajeros;
     }
 
-    public int getCantPuertas() {
-        return cantPuertas;
-    }
-
-    public void setCantPuertas(int cantPuertas) {
-        this.cantPuertas = cantPuertas;
-    }
-
     public void verInfo() {
         System.out.println("Soy un Auto Bus");
-        System.out.println("Modelo: " + modelo + "\nPlaca:  " + placa + "\nMotor :" + motor
-                + "\nCantidad de pasajeros :" + cantPasajeros + "\nCantidad de puertas :" + cantPuertas);
+        System.out.println("Tipo Trasporte: " + this.tipoTrasporte + "\nCantidad de pasajeros :" + cantPasajeros + "\n" + "-".repeat(30));
+    }
+
+    public void verInfoComplete() {
+
+        System.out.println("Soy un Auto Bus");
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
+
+        System.out.println("Cantidad de llantas:  " + getCantLlantas() + "\nMotor: " + getMotor());
+
+        System.out.println("Tipo Trasporte: " + this.tipoTrasporte + "\nCantidad de pasajeros: " + cantPasajeros + "\n" + "-".repeat(30));
     }
 
 }

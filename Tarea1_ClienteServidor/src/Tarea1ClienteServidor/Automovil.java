@@ -1,56 +1,34 @@
 package Tarea1ClienteServidor;
 
-public class Automovil {
+public class Automovil extends Terrestre {
 
     //Atributos
-    private String modelo, motor, placa;
-    private int cantPasajeros, cantPuertas;
+    private String tipoAuto;
 
     //Constructor
-    public Automovil(String modelo, String placa, String motor, int cantPasajeros, int cantPuertas) {
-        this.modelo = modelo;
-        this.placa = placa;
-        this.motor = motor;
-        this.cantPasajeros = cantPasajeros;
+    public Automovil(String marca, String modelo, String color, int cantLlantas, String motor, String tipoAuto) {
+        super(marca, modelo, color, cantLlantas, motor);
+        this.tipoAuto = tipoAuto;
     }
 
     //Metodos
-    public String getModelo() {
-        return modelo;
+    public String getTipoAuto() {
+        return tipoAuto;
     }
 
-    public String getPlaca() {
-        return placa;
-    }
-
-    public String getMotor() {
-        return motor;
-    }
-
-    public void setMotor(String motor) {
-        this.motor = motor;
-    }
-
-    public int getCantPasajeros() {
-        return cantPasajeros;
-    }
-
-    public void setCantPasajeros(int cantPasajeros) {
-        this.cantPasajeros = cantPasajeros;
-    }
-
-    public int getCantPuertas() {
-        return cantPuertas;
-    }
-
-    public void setCantPuertas(int cantPuertas) {
-        this.cantPuertas = cantPuertas;
-    }
-
+    @Override
     public void verInfo() {
         System.out.println("Soy un Automovil");
-        System.out.println("Modelo: " + modelo + "\nPlaca:  " + placa + "\nMotor :" + motor
-                + "\nCantidad de pasajeros :" + cantPasajeros + "\nCantidad de puertas :" + cantPuertas);
+        System.out.println("Tipo de Auto: " + this.tipoAuto + "\n" + "-".repeat(30));
+    }
+
+    @Override
+    public void verInfoComplete() {
+
+        System.out.println("Soy un Automovil");
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
+        System.out.println("Cantidad de llantas:  " + getCantLlantas() + "\nMotor: " + getMotor());
+        System.out.println("Tipo de Auto: " + this.tipoAuto + "\n" + "-".repeat(30));
     }
 
 }

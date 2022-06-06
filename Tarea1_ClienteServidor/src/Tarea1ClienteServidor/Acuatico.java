@@ -4,14 +4,13 @@ public class Acuatico extends Vehiculo {
 
     //Atributos
     private int cantAspas;
-    private String tipo, combustible;
+    private String tipo;
 
     //Constructor
-    public Acuatico(int cantAspas, String tipo, String combustible, String marca, int anioFabricacion, String color) {
-        super(marca, anioFabricacion, color);
+    public Acuatico(String marca, String modelo, String color, int cantAspas, String tipo) {
+        super(marca, modelo, color);
         this.tipo = tipo;
         this.cantAspas = cantAspas;
-        this.combustible = combustible;
     }
 
     //Metodos
@@ -23,26 +22,17 @@ public class Acuatico extends Vehiculo {
         return tipo;
     }
 
-    public String getCombustible() {
-        return combustible;
-    }
-
-    public void setCombustible(String combustible) {
-        this.combustible = combustible;
-    }
-
     @Override
     public void verInfo() {
         System.out.println("Soy Acuatico");
-        System.out.println("Tipo: " + this.tipo + "\nCantidad de aspas:  " + this.cantAspas + "\nCambustible: "
-                + this.combustible + "\n" + "-".repeat(30));
+        System.out.println("Tipo: " + this.tipo + "\nCantidad de aspas:  " + this.cantAspas + "\n" + "-".repeat(30));
     }
 
     public void verInfoComplete() {
         System.out.println("Soy un Vehiculo");
-        System.out.println("Marca: " + getMarca() + "\nAño de Fabricacion:  " + getAnioFabricacion() + "\nColor :" + getColor());
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
+
         System.out.println("Soy Acuatico");
-        System.out.println("Tipo: " + this.tipo + "\nCantidad de aspas:  " + this.cantAspas + "\nCambustible: "
-                + this.combustible + "\n" + "-".repeat(30));
+        System.out.println("Tipo: " + this.tipo + "\nCantidad de aspas:  " + this.cantAspas + "\n" + "-".repeat(30));
     }
 }

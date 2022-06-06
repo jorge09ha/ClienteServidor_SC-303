@@ -3,13 +3,12 @@ package Tarea1ClienteServidor;
 public class Vehiculo {
 
 //Atributos
-    private String marca, color;
-    private int anioFabricacion;
+    private String marca, modelo, color; 
 
     //Constructor
-    public Vehiculo(String marca, int anioFabricacion, String color) {
+    public Vehiculo(String marca, String modelo, String color) {
         this.marca = marca;
-        this.anioFabricacion = anioFabricacion;
+        this.modelo = modelo;
         this.color = color;
     }
 
@@ -18,8 +17,8 @@ public class Vehiculo {
         return marca;
     }
 
-    public int getAnioFabricacion() {
-        return anioFabricacion;
+    public String getModelo() {
+        return modelo;
     }
 
     public String getColor() {
@@ -32,7 +31,7 @@ public class Vehiculo {
 
     public void verInfo() {
         System.out.println("Soy un Vehiculo");
-        System.out.println("Marca: " + this.marca + "\nAño de Fabricacion:  " + this.anioFabricacion + "\nColor :"
+        System.out.println("Marca: " + this.marca + "\nModelo:  " + this.modelo + "\nColor: "
                 + this.color + "\n" + "-".repeat(30));
     }
 }

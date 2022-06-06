@@ -4,44 +4,39 @@ public class Terrestre extends Vehiculo {
 
     //Atributos
     private int cantLlantas;
-    private String tipo, combustible;
+    private String motor;
 
     //Constructor
-    public Terrestre(String marca, int anioFabricacion, String color, String tipo, int cantLlantas, String combustible) {
-        super(marca, anioFabricacion, color);
-        this.tipo = tipo;
+    public Terrestre(String marca, String modelo, String color, int cantLlantas, String motor) {
+        super(marca, modelo, color);
         this.cantLlantas = cantLlantas;
-        this.combustible = combustible;
+        this.motor = motor;
     }
 
     //Metodos
-    public String getTipo() {
-        return tipo;
-    }
-
     public int getCantLlantas() {
         return cantLlantas;
     }
 
-    public String getCombustible() {
-        return combustible;
+    public String getMotor() {
+        return motor;
     }
 
-    public void setCombustible(String combustible) {
-        this.combustible = combustible;
+    public void setMotor(String motor) {
+        this.motor = motor;
     }
 
+    @Override
     public void verInfo() {
         System.out.println("Soy Terrestre");
-        System.out.println("Tipo: " + this.tipo + "\nCantidad de llantas:  " + this.cantLlantas + "\nCambustible: "
-                + this.combustible + "\n" + "-".repeat(30));
+        System.out.println("Cantidad de llantas:  " + this.cantLlantas + "\nMotor: " + this.motor + "\n" + "-".repeat(30));
     }
 
     public void verInfoComplete() {
         System.out.println("Soy un Vehiculo");
-        System.out.println("Marca: " + getMarca() + "\nAño de Fabricacion:  " + getAnioFabricacion() + "\nColor :" + getColor());
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
+
         System.out.println("Soy Terrestre");
-        System.out.println("Tipo: " + this.tipo + "\nCantidad de llantas:  " + this.cantLlantas + "\nCambustible: "
-                + this.combustible + "\n" + "-".repeat(30));
+        System.out.println("Cantidad de llantas:  " + this.cantLlantas + "\nMotor: " + this.motor + "\n" + "-".repeat(30));
     }
 }
