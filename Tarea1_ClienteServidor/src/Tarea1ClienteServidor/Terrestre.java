@@ -1,5 +1,5 @@
 
-package Tarea1_ClienteServidor;
+package Tarea1ClienteServidor;
 
 public class Terrestre {
     private int cantLlantas;

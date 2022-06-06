@@ -1,6 +1,6 @@
-package Tarea1_ClienteServidor;
+package Tarea1ClienteServidor;
 
-public class AutoBus {
+public class Automovil {
 
     private String modelo, motor, placa;
     private int cantPasajeros, cantPuertas;
