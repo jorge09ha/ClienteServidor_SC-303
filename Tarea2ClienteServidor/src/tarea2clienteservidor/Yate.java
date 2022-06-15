@@ -7,8 +7,8 @@ public class Yate extends Acuatico {
     private boolean tieneVela;
 
     //Constructor
-    public Yate(String marca, String modelo, String color, int cantAspas, String tipo, int cantPasajeros, boolean tieneVela) {
-        super(marca, modelo, color, cantAspas, tipo);
+    public Yate(String marca, String modelo, int cantAspas, String tipo, int cantPasajeros, boolean tieneVela) {
+        super(marca, modelo, cantAspas, tipo);
         this.cantPasajeros = cantPasajeros;
         this.tieneVela = tieneVela;
     }
@@ -38,12 +38,10 @@ public class Yate extends Acuatico {
 
     @Override
     public void verInfoComplete() {
-        
-        System.out.println("Soy un Yate");
-        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo() + "\nColor: " + getColor());
-        
-        System.out.println("Tipo: " + getTipo() + "\nCantidad de aspas:  " + getCantAspas());
 
+        System.out.println("Soy un Yate");
+        System.out.println("Marca: " + getMarca() + "\nModelo:  " + getModelo());
+        System.out.println("Tipo: " + getTipo() + "\nCantidad de aspas:  " + getCantAspas());
         System.out.println("Cantidad de pasajeros: " + this.cantPasajeros + "\nTiene Vela:  " + this.tieneVela + "\n" + "-".repeat(30));
     }
 }

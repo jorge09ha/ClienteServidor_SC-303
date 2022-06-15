@@ -3,13 +3,12 @@ package tarea2clienteservidor;
 public class Vehiculo {
 
 //Atributos
-    private String marca, modelo, color;
+    private String marca, modelo;
 
     //Constructor
-    public Vehiculo(String marca, String modelo, String color) {
+    public Vehiculo(String marca, String modelo) {
         this.marca = marca;
         this.modelo = modelo;
-        this.color = color;
     }
 
     //Metodos
@@ -21,26 +20,12 @@ public class Vehiculo {
         return modelo;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void verInfo() {
-        System.out.println("Soy un Vehiculo");
-        System.out.println("Marca: " + this.marca + "\nModelo:  " + this.modelo + "\nColor: "
-                + this.color + "\n" + "-".repeat(30));
-    }
-
-    public void queSoy(Vehiculo e) { //Instancia
-        if (e instanceof Acuatico) {
-            System.out.println("Son un vehiculo acuatico");
-        } else if (e instanceof Terrestre) {
-            System.out.println("Son un vehiculo terretre");
+    public static void queSoy(Vehiculo e) {
+        if (e instanceof Terrestre) {
+            System.out.println(" Soy un vehiculo TERRESTRE" + "\n");
+        } else if (e instanceof Acuatico) {
+            System.out.println(" Soy un vehiculo ACUATICO" + "\n");
         }
-
     }
+
 }
