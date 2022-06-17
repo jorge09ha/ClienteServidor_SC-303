@@ -1,4 +1,4 @@
-package Semana4;
+package S4.herencia;
 
 public class Cliente extends Persona {
 

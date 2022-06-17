@@ -1,6 +1,4 @@
-package Semana4.ejmGeometria;
-
-import Semana4.*;
+package S4.astraccion;
 
 public class Persona implements OperacionesPersonales { //Esta clase persona implementa las interfaces
 

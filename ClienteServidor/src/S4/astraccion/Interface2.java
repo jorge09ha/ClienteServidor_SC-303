@@ -1,5 +1,5 @@
 
-package Semana4.ejmGeometria;
+package S4.astraccion;
 
 public interface Interface2 {
     public void algo();

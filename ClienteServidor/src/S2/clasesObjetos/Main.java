@@ -1,4 +1,4 @@
-package Semana2;
+package S2.clasesObjetos;
 
 public class Main {
 

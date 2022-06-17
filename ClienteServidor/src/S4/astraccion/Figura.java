@@ -1,4 +1,4 @@
-package Semana4.ejmGeometria;
+package S4.astraccion;
 
 //Solo es pone astracto a figura
 public abstract class Figura {

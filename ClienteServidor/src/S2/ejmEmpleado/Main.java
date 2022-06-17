@@ -1,4 +1,4 @@
-package Semana2.ejmEmpleado;
+package S2.ejmEmpleado;
 
 public class Main {
 

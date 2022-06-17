@@ -1,4 +1,4 @@
-package Semana4.ejmGeometria;
+package S4.astraccion;
 
 public class Cuadrado extends Figura {
 
